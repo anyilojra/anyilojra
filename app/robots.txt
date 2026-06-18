@@ -1,0 +1,14 @@
+import type { MetadataRoute } from "next"
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/admin", "/carrito", "/checkout"],
+      },
+    ],
+    sitemap: "https://www.santizzima.com/sitemap.xml",
+  }
+}
